@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reservas - Essenza</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+ 
+<body>
+  <header>
+    <h1>
+        <img src="images/logoEssenza.jpg" alt="Logo Essenza">
+        ESSENZA
+    </h1>
+   
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="carta.html">Carta</a></li>
+            <li><a href="menuDelDia.html">Menú del Día</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- título principal de la página -->
+    <h2 class="reservaTitulo">RESERVA TU EXPERIENCIA EN ESSENZA</h2>
+    <!-- contenedor específico para centrar el formulario solo en esta página -->
+    <div class="contenido-form">
+      <!-- mediante form action ="confirmacion.html" consegigo que al darle al boton de enviar reserva submit, me lleve a la página confirmación-->
+      <form action="confirmacion.html" method="post">
+        <!-- primer fieldset para los datos personales-->
+        <fieldset>
+          <legend>Datos Personales</legend> <!-- leyenda del fieldset-->
+        
+          <label for="nombre">Nombre y Apellidos:</label><br>
+          <input type="text" id="nombre" name="nombre" required><br><br> <!-- con required para uqe ciertos campos sean obligatorios-->
+        
+          <label for="email">Correo Electrónico:</label><br>
+          <input type="email" id="email" name="email" required><br><br>
+        
+          <label for="telefono">Teléfono:</label><br>
+          <input type="tel" id="telefono" name="telefono" required><br><br>
+        </fieldset>
+        <!-- segundo fieldset para los detalles de resrva-->
+        <fieldset>
+          <legend>Detalles de la Reserva</legend>
+          
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" name="fecha" required><br><br>
+          
+          <label for="hora">Hora:</label>
+          <input type="time" id="hora" name="hora" required><br><br>
+          
+          <label for="personas">Número de personas:</label>
+          <select id="personas" name="personas">
+            <option value="1">1 persona</option>
+            <option value="2">2 personas</option>
+            <option value="3">3 personas</option>
+            <option value="4">4 personas</option>
+            <option value="5">5 personas</option>
+            <option value="6">6 personas</option>
+            <option value="7">7 personas</option>
+            <option value="8">8 personas</option>
+          </select><br><br>
+          
+          <p>Zona preferida:</p>
+          <label><input type="radio" name="zona" value="interior"> Interior</label><br>
+          <label><input type="radio" name="zona" value="terraza"> Terraza</label><br><br>
+          
+          <p>Servicios adicionales:</p>
+          <label><input type="checkbox" name="servicios" value="vino"> Selección de vinos</label><br>
+          <label><input type="checkbox" name="servicios" value="menuDegustacion"> Menú degustación</label><br>
+          <label><input type="checkbox" name="servicios" value="sorpresa"> Sorpresa romántica</label><br><br>
+          
+          <label for="mensaje">Observaciones:</label><br>
+          <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Indique alergias, preferencias..."></textarea>
+        </fieldset>
+        <!-- último fieldset para la política de privacidad-->
+        <fieldset>
+          <legend>Confirmación</legend>
+          <label><input type="checkbox" name="privacidad" required> Acepto la política de privacidad</label>
+        </fieldset>
+        <!-- botones para enviar/limpiar la resrva-->
+        <br>
+        <input type="reset" value="Limpiar formulario">
+        <input type="submit" value="Enviar reserva">
+      </form>
+    </div>
+  </main>
+  
+  <!-- Footer común para todas las páginas -->
+  <footer>
+    <div class="footerContenido">
+        <p>&copy; 2025 ESSENZA - Mediterranean Food</p>
+        <p>Ubicación: Carrer de Ses Salines, 07860 Ses Salines, Ibiza</p>
+        <p>Teléfono: 
+            <a href="tel:+34 946 00 87 32" class="footerLink">
+                +34 946 00 87 32
+            </a>
+        </p>
+        <p>Email: 
+            <a href="https://mail.google.com/" target="_blank" class="footerLink">
+                essenzaibiza@gmail.com
+            </a>
+        </p>
+        <p>
+            Facebook: <a href="https://www.facebook.com/" target="_blank" class="footerLink">@essenzaibiza</a> | 
+            Instagram:<a href="https://www.instagram.com/" target="_blank" class="footerLink">@essenzaibiza</a>
+        </p>
+        <!-- Sello de validación CSS -->
+        <p>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="¡CSS Válido!" />
+            </a>
+        </p>
+    </div>
+  </footer>  
+
+</body>
+</html>

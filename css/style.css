@@ -1,0 +1,858 @@
+/* ================== RESET + BODY ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cormorant Garamond", serif; 
+    font-size: 17px;
+    line-height: 1.7;
+    color: #3a3a3a;
+    background: #f8f5f0; 
+}
+
+/* ================== HEADER + NAV PRINCIPAL ================== */
+/* === HEADER === */
+/* diseño de la cabecera*/
+header {
+    background-color: #f2ede6; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 55px;
+    border-bottom: 1px solid #d6cfc4; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/* diseño del titulo principal de la página en la cabecera ("ESSENZA")*/
+header h1 {
+    display: flex;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    font-size: 2.6rem;
+    color: #5b4636; 
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* código para el tamaño y colocación de mi logo en la cabecera de arriba junto al nombre */
+header h1 img {
+    height: 55px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+/* === NAV PRINCIPAL === */
+nav ul {
+    list-style: none; /* para no tener viñetas en el menú nav */
+    display: flex;
+    gap: 25px; 
+    flex-wrap: wrap; /* por si no cabe en una línea */
+    justify-content: flex-end; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #6f5f4e; /* marrón cálido */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem; /* un pelín más pequeño */
+    padding: 8px 10px; /* ajustado para botones más equilibrados */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+/* estilo o efecto al poner el ratón sobre alguna de las opciónes del menú nav principal*/
+nav a:hover {
+    color: #f8f5f0;
+    background-color: #a68b76;
+}
+
+/* ================== INDICE LATERAL PARA NAVEGAR DENTRO DE CADA PÁGINA ================== */
+.indice {
+    position: sticky;
+    top: 120px; 
+    background-color: #f2ede6;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 900;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* lista horizontal */
+.indice ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.indice ul li a {
+    text-decoration: none;
+    color: #5b4636;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.indice ul li a:hover {
+    color: #a68b76;
+}
+
+
+/* ================== ELEMENTOS GLOBALES ================== */
+/* estilo del main */
+/**/
+main {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    font-family: "Cormorant Garamond", serif;
+    color: #3a3a3a;
+}
+
+/*estilo del footer común de la página*/
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background-color: #5b4636; 
+    color: #f8f5f0; 
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.6px;
+}
+
+/*estilo de los enlaces del footer*/
+footer a.footerLink {
+    color: #f8f5f0; 
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+/*estilo al poner el ratón sobre cualquier enlace del footer*/
+footer a.footerLink:hover {
+    color: #d6cfc4; /* beige más suave al pasar el ratón */
+}
+
+/* código para dar estilo al sello de validación de css */
+.footerContenido img {
+    margin-top: 10px;
+    filter: brightness(0.95);
+}
+
+
+/* ================== INDEX.HTML ================== */
+/* colocación ye stilo del lema de la página de inicio*/
+.lema {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 2rem;
+    color: #5b4636;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+/*estilo de la sección en la que va la foto principal de la pagina de inicio*/
+.terraza {
+    background-color: #f8f5f0;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/*estilo de la foto de la página principal*/
+.terraza img {
+    width: 70%;
+    max-width: 1000px;
+    height: auto;
+    max-height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+/* === sección NUESTRA ESENCIA de la pagina de inicio === */
+/* estilo de la parte en la que está la sección nuestra esencia*/
+.esencia {
+    background-color: #f2ede6;
+    padding: 60px 80px;
+    text-align: center;
+}
+/* estilo del titulo de nuestra esencia en la pagina de inicio*/
+.esencia h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    color: #5b4636;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.esencia p,
+.destacados .plato .descripcion p {
+    font-size: 1.2rem;  
+    color: #3a3a3a;
+    line-height: 1.8;
+}
+
+/* === sección PLATOS DESTACADOS de la pagina de inicio === */
+.destacados {
+    background-color: #f8f5f0; 
+    padding: 60px 40px;
+    text-align: center;
+    max-width: 1000px; /* centrado sin llegar a los bordes */
+    margin: 0 auto;
+}
+
+.destacados h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    color: #5b4636;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    border: none;
+}
+
+/* Cada plato */
+.plato {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+/* Solo los platos que quiero invertir, es decir, que salgan alternos (foto-plato, plato-foto) */
+.plato-derecha {
+    flex-direction: row-reverse;
+}
+
+/* estilo de la secciónd descripción de los platos */
+.plato .descripcion {
+    flex: 1;
+    font-family: "Cormorant Garamond", serif;
+    text-align: left;
+    min-width: 250px; 
+    margin: 10px;
+}
+
+/* estilo del título de cada plato */
+.plato .descripcion h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+    color: #6f5f4e;
+    margin-bottom: 15px;
+}
+/* estilo del texto p de descripción de cada plato */
+.plato .descripcion p {
+    font-size: 1.2rem; /* igual que Nuestra Esencia */
+    color: #3a3a3a;
+    line-height: 1.8;
+}
+
+/* imagen de los platos */
+.plato .imagen {
+    flex: 1;
+    text-align: center;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.plato .imagen img {
+    max-width: 80%;   
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* estilo de la sección para ver más de la carta a partir de los platos destacados*/
+.verMasCarta {
+    background-color: #f8f5f0; 
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+ /* estilo del texto de esa sección*/
+.verMasCarta p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.2rem;
+    color: #3a3a3a;
+    margin-bottom: 20px;
+}
+/*el botón de la sección (link)*/
+.verMasCarta a {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #5b4636;
+    border: 1px solid #5b4636;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+/* estilo del boton al pasar el raton por encima */
+.verMasCarta a:hover {
+    background-color: #5b4636;
+    color: #f8f5f0;
+}
+
+/* === sección EVENTOS de la pagina de inicio === */
+/* estilo de fondo y alineación del texto de esta sección*/
+.eventosInicio {
+    background-color: #f2ede6; 
+    padding: 60px 80px;
+    text-align: center;
+}
+/* estilo del titulo de esta sección*/
+.eventosInicio h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    color: #5b4636;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* estilo del texto de la seccion EVENTOS*/
+/* con esto nos aseguramos de que el texto aparece centrado y sin ocupar todo el ancho como en la sección de nuestra esencia */
+/* ya que a nuestra esencia le quería dar mas improtancia al ser la entrada al principio de la página*/
+.eventosInicio p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.2rem;
+    color: #3a3a3a;
+    line-height: 1.8;
+    width: 80%;  /*ocupa el 80% del ancho de la página */
+    max-width: 900px;    
+    margin: 0 auto 25px; /*centrado y con espacio inferior */
+    text-align: center;  /*texto centrado */
+}
+
+/*estilo de la imagen de los eventos de la pagina inicial*/
+.eventosInicio .imagenEvento img {
+    width: 60%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 25px auto;
+    display: block;
+}
+
+/* Botón igual que en verMasCarta pero para esta sección */
+.botonEventosInicio {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #5b4636;
+    border: 1px solid #5b4636;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+/*estilo del boton al pasar el raton por encima*/
+.botonEventosInicio:hover {
+    background-color: #5b4636;
+    color: #f8f5f0;
+}
+
+
+/* ================== CARTA.HTML ================== */
+.carta {
+    margin-bottom: 40px;
+    background-color: #f2ede6; 
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+/*estilo del título de la NUESTRA CARTA*/
+.carta h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    color: #5b4636;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.carta h3 {
+    font-size: 1.6rem;
+    color: #6f5f4e;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-left: 4px solid #d6cfc4; /* linea vertical en las secciones de la carta */
+    padding-left: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.carta ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.carta ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dotted #ccc;
+    font-size: 1.05rem;
+}
+
+.carta .precio {
+    font-weight: 600;
+    color: #5b4636;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*estilo de la zona de la carta en la que se puede acceder al menú del día */
+.accesoMenu {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #f2ede6;
+    padding: 20px;
+    border-radius: 8px;
+}
+/*estilo del texto de esa zona */
+.accesoMenu p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+/*el boton mediante el link */
+.accesoMenu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #5b4636;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid #5b4636;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+/*estilo del boton al pasar el ratón por encima */
+.accesoMenu a:hover {
+    background-color: #5b4636;
+    color: #f8f5f0;
+}
+
+
+/* ================== MENUDELDIA.HTML ================== */
+/* estilod el contenedor de TODO el menú*/
+.menuContenidoCompleto {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* contenedores de las imagenes laterales, es decir, de las columnas de la izquierda y derecha */
+.menuColumnaLateral {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 0 0 250px; 
+    max-width: 30%;   /* no ocupa más del 28% del contenedor */
+}
+/*estilo de las imagenes de las columnas laterales */
+.menuColumnaLateral img {
+    flex: 1; /* cada imagen ocupa altura proporcional */
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+/* estilo del menú central */
+.menuDelDia {
+    flex: 0 0 600px;
+    background-color: #f2ede6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 30px 40px;
+    text-align: center;
+    flex-direction: column;
+    font-family: "Cormorant Garamond", serif; /* igual que carta.html para textos generales */
+    color: #3a3a3a;
+}
+
+/* estilo del titulo principal del menú del día h2 */
+.menuDelDia h2 {
+    font-family: "Playfair Display", serif; /* mismo color y estilo que la carta */
+    font-size: 2.2rem;
+    color: #5b4636;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* estilo de los subtitulos, entrantes, principales...*/
+.itemMenu h3 {
+    font-family: "Montserrat", sans-serif; /* igual que carta.html */
+    font-size: 1.6rem;
+    color: #6f5f4e;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-left: 4px solid #d6cfc4;
+    padding-left: 10px;
+    font-weight: 500;
+    text-align: left; /* para que me coincida con la alineación de carta */
+}
+
+/* estilo para las listas de opciones de menu centradas y sin viñetas */
+.itemMenu ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+/* estilo de los items de la lista*/
+.itemMenu ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dotted #ccc;
+    font-size: 1.05rem;
+}
+
+/* estilo del precio final del menú del día de la parte baja de la página*/
+.precioMenu {
+    font-weight: 600;
+    color: #5b4636;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 25px;
+    font-size: 1.05rem;
+}
+
+/* ================== EVENTOS.HTML ================== */
+.eventos {
+    background-color: #f2ede6; 
+    padding: 40px 50px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+/* estilo del titulo de EVENTOS EN ESSENZA*/
+.eventos h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    color: #5b4636;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* estilo del texto principal de los eventos*/
+.eventos p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.2rem;
+    color: #3a3a3a;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* estilo de la tabla para eventos */
+.tablaEventos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f8f5f0; /* beige claro */
+    margin-bottom: 50px;
+    font-family: "Montserrat", sans-serif;
+}
+/* estilo para las cabeceras y elementos de la tabla*/
+.tablaEventos th,
+.tablaEventos td {
+    border: 1px solid #d6cfc4;
+    padding: 12px 15px;
+    text-align: center;
+}
+/* estilo de cabeceras de la tabla*/
+.tablaEventos th {
+    background-color: #f2ede6;
+    font-weight: bold;
+    color: #5b4636;
+}
+
+/* he buscado este código para poder alternar las filas de la tabla en color, para un efecto visual algo más atractivo*/
+.tablaEventos tbody tr:nth-child(even) {
+    background-color: #f2ede6; 
+}
+
+/* estilo de las descripciones de los eventos */
+.descripcionEvento {
+    padding: 40px 50px;
+    max-width: 1000px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* estilo del título de los eventos*/
+.descripcionEvento h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: #5b4636;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* estilo del texto de los eventos*/
+.descripcionEvento p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    color: #3a3a3a;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Fondo alterno*/
+/* de esta manera he alternado el fondo de  los eventos, para un efecto mas vistoso*/
+.descripcionEvento.beige {
+    background-color: #f8f5f0;
+}
+
+.descripcionEvento.blanco {
+    background-color: #ffffff;
+}
+
+/* imagenes de eventos*/
+.imagenEvento {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.imagenEvento img {
+    width: 85%;
+    max-width: 800px;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+
+/* ================== GALERIA.HTML ================== */
+/* la sección de galería */
+/* estilo del contenedor total del grid*/
+.galeria {
+    background-color: #f2ede6; 
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 10px; /* para las esquinas del fondo redondeadas como en eventos/carta/menú*/
+}
+
+/*estilo del título de la galería de fotos "GALERÍA DE ESSENZA*/
+.galeria h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    color: #5b4636;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Grid de fotos */
+.gridGaleria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* he buscado esta sentencia para cuadrar las fotos en la galería*/
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* estilo del contenedor individual de cada imagen */
+.gridGaleria .foto {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* estilo de cada foto*/
+.gridGaleria .foto img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ================== RESERVAS.HTML ================== */
+/*titulo del formulario*/
+.reservaTitulo {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: #5b4636;
+    text-align: center;
+    margin-top: 40px;
+    letter-spacing: 1px;
+}
+/*main del formulario*/
+main form {
+    max-width: 700px;
+    margin: 20px;
+    background-color: #f2ede6; 
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: "Cormorant Garamond", serif;
+    color: #3a3a3a;
+}
+
+/* estilo de títulos de cada bloque */
+fieldset {
+    border: 1px solid #d6cfc4;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #f8f5f0;
+}
+/*estilo de la leyenda de cada apartado del formulario*/
+legend {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    color: #5b4636;
+    padding: 0 10px;
+}
+
+/* etiquetas*/
+label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: #5b4636;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* inputs, select y textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    color: #3a3a3a;
+    transition: border-color 0.3s ease;
+}
+
+
+/* radios y checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #5b4636; 
+    transform: scale(1.1);
+    margin-right: 8px;
+}
+
+/* textarea */
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* botones */
+input[type="submit"],
+input[type="reset"] {
+    background-color: #5b4636;
+    color: #f8f5f0;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/*estilo de los botones limpiar y enviar*/
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #a68b76;
+}
+
+/* centrar el formulario en la página */
+/* contenedor solo para reservas */
+.contenido-form {
+    display: flex;
+    justify-content: center; /* con esta sentencia lo centra horizontalmente */
+    padding: 60px 20px;
+}
+
+/* estilo del formulario*/
+.contenido-form form {
+    max-width: 700px;
+    width: 100%;
+    background-color: #f2ede6;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: "Cormorant Garamond", serif;
+    color: #3a3a3a;
+    box-sizing: border-box;
+}
+
+
+/* ================== CONFIRMACION.HTML ================== */
+/* estilo de la página de confirmación de  después de enviar la reserva*/
+.confirmacion {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f8f5f0;
+  color: #3a3a3a;
+}
+/*estilo para el titulo de la pantalla de confirmación*/
+.confirmacion h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  color: #5b4636;
+  margin-bottom: 20px;
+}
+/*estilo para el texto de la pantalla de confirmación*/
+.confirmacion p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: #3a3a3a;
+}
+/*estilo del botón para volver al inicio*/
+.botonVolver {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #5b4636;
+  color: #f8f5f0;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  transition: background-color 0.3s;
+}
+/*estilo del botón al pasar el raton por encima*/
+.botonVolver:hover {
+  background-color: #a68b76;
+}
+
+
+
+
+

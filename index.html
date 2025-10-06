@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESSENZA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <header>
+    <!--logo del restaurante que aparece delante del título principal de la página-->
+    <h1>
+        <img src="images/logoEssenza.jpg" alt="Logo Essenza">
+        ESSENZA
+    </h1>
+   <!--menú principal de la página-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="carta.html">Carta</a></li>
+            <li><a href="menuDelDia.html">Menú del Día</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <!--Índice de la pagina de inicio para acceder a las secciones-->
+    <aside class="indice">
+        <ul>
+            <li><a href="#esencia">NUESTRA ESENCIA</a></li>
+            <li><a href="#destacados">PLATOS DESTACADOS</a></li>
+            <li><a href="#eventosInicio">EVENTOS</a></li>
+        </ul>
+    </aside>
+
+
+    <!-- Lema del restaurante que aparece justo arriba de la foto de la terraza con vistas -->
+    <section>
+        <h2 class="lema"><strong>"Del mar a tu mesa, con esencia mediterránea"</strong></h2>
+    </section>
+
+
+    <!-- Imagen de la terraza -->
+    <div class="terraza">
+        <img src="images/fotoTerrazaConVistas.jpg" alt="Terraza con vistas al mar">
+    </div>
+
+    <!-- SECCIÓN NUESTRA ESENCIA de la pagina inicial, con una breve descripción-->
+    <section class = "esencia" id="esencia">
+        <h2>NUESTRA ESENCIA</h2>
+            <p>En <strong>Essenza</strong> creemos en el arte de combinar tradición y modernidad. 
+                Nuestra cocina se inspira en el Mediterráneo, con productos frescos de proximidad y un toque contemporáneo que eleva cada plato. 
+                Más que un restaurante, somos una experiencia junto al mar, en el corazón de Ibiza.
+            </p>
+
+            <p>Déjate seducir por la playa de <strong>Ses Salines</strong> donde nos ubicamos, una de las más conocidas y concurridas de la isla. 
+                Descubre su energía única y sus aguas turquesa, rodéate de un ambiente soleado que purifica cuerpo y alma, haciendo que cada visita a <strong>Essenza</strong> sea inolvidable. 
+                Nuestro restaurante es un oasis donde la cocina mediterránea se combina con la belleza del entorno, ofreciendo momentos llenos de magia, sabor y esencia auténtica.
+            </p>
+
+    </section>
+
+
+    <!-- SECCIÓN NUESTROS PLATOS DESTACADOS de la página inicial-->
+    <!-- Esta sección envuelve los platos estrella del restaurante con una breve descripción de cada uno-->
+    <section class="destacados" id="destacados">
+        <h2>NUESTROS PLATOS DESTACADOS</h2>
+            <div class="plato">
+                <div class="descripcion">
+                <h3>Ensalada de tomates de huerta y burrata</h3>
+                    <p>Inspirada en la frescura mediterránea, combina tomates de temporada con cremosa burrata y un toque de vinagreta de pesto para resaltar todos los sabores.</p>
+                </div>
+                <div class="imagen">
+                    <img src="images/ensaldaDeTomateYBurrata.jpg" alt="Ensalada de tomate">
+                </div>
+            </div>
+            
+            <div class="plato derecha">
+                <div class="imagen">
+                    <img src="images/tatakiAtunRojo.jpg" alt="Tataki de Atún Rojo">
+                </div>
+                <div class="descripcion">
+                    <h3>Tataki de Atún Rojo</h3>
+                    <p>Un plato elegante y colorido, con atún rojo de primera calidad, ligeramente sellado, acompañado de vinagreta de piñones y toque cítrico.</p>
+                </div>
+            </div>
+
+            <div class="plato">
+                <div class="descripcion">
+                    <h3>Tarta de Queso al Horno</h3>
+                    <p>Postre delicado y cremoso, con mermelada de arándanos casera que aporta un contraste visual y de sabor, perfecto para cerrar la experiencia gastronómica.</p>
+                </div>
+                <div class="imagen">
+                    <img src="images/tartaDeQueso.jpg" alt="Tarta de Queso al Horno">
+                </div>
+            </div>
+
+    </section>
+    
+    <!-- Este botón que lleva a la página de la carta, en caso de que el usuario esté inetresado en saber más sobre los platos-->
+    <div class="verMasCarta">
+        <p>Si quieres ver más sobre nuestros platos, consulta nuestra carta completa</p>
+        <a href="carta.html" class="verMasCarta">Ver Carta</a>
+    </div>
+
+
+    <!-- SECCIÓN EVENTOS de la pagina inicial-->
+    <section class="eventosInicio" id="eventosInicio">
+        <h2>EVENTOS EN ESSENZA</h2>
+            <p>
+                En <strong>Essenza</strong> ambientamos nuestro restaurante de lunes a domingo con 
+                distintos eventos que harán de cada visita una experiencia única. Disfruta de música en vivo, 
+                actuaciones y veladas especiales en nuestro escenario frente al mar, donde la gastronomía 
+                se mezcla con la brisa mediterránea para crear momentos inolvidables.
+            </p>
+        <div class="imagenEvento">
+            <img src="images/conciertoTropico1.webp" alt="Evento en Essenza">
+        </div>
+        <p>Descubre más sobre nuestros eventos y vive la experiencia al completo</p>
+        <!--botón que lleva a ver más eventos desde la página incial a la de eventos.html-->
+        <a href="eventos.html" class="botonEventosInicio">Ver Eventos</a>
+    </section>
+
+    <!-- Footer común para todas las páginas -->
+    <footer>
+        <div class="footerContenido">
+            <p>&copy; 2025 ESSENZA - Mediterranean Food</p>
+            <p>Ubicación: Carrer de Ses Salines, 07860 Ses Salines, Ibiza</p>
+            <p>Teléfono: 
+                <a href="tel:+34 946 00 87 32" class="footerLink">
+                    +34 946 00 87 32
+                </a>
+            </p>
+            <p>Email: 
+                <a href="https://mail.google.com/" target="_blank" class="footerLink">
+                    essenzaibiza@gmail.com
+                </a>
+            </p>
+            <p>
+                Facebook: <a href="https://www.facebook.com/" target="_blank" class="footerLink">@essenzaibiza</a> | 
+                Instagram:<a href="https://www.instagram.com/" target="_blank" class="footerLink">@essenzaibiza</a>
+            </p>
+
+            <!-- Sello de validación CSS -->
+            <p>
+                <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:88px;height:31px"
+                        src="https://jigsaw.w3.org/css-validator/images/vcss"
+                        alt="¡CSS Válido!" />
+                </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
